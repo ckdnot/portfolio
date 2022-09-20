@@ -1,0 +1,715 @@
+@charset "utf-8";
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+@font-face {
+    font-family: 'NewYork';
+    src: url('../font/NewYork.otf') format('opentype');
+}
+
+body {
+    background: #faf9ff;
+    color: #333;
+    font-family: 'Pretendard', 'Malgun Gothic', 'Dotum', sans-serif;
+    letter-spacing: -1%;
+}
+
+/* ------------------------- pc ------------------------- */
+
+/* -------------------- left bar -------------------- */
+
+.left_bar {
+    width: 80px;
+    height: 100%;
+    border-right: 1px solid #333;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;    
+}
+.left_bar .blank {
+    width: 80px;
+    height: 80px;
+}
+.left_bar h2 {
+    font-family: 'NewYork';
+    font-size: 40px;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+}
+.left_bar p {
+    width: 80px;
+    height: 80px;
+    font-family: 'NewYork';
+    font-size: 40px;
+    line-height: 80px;
+    text-align: center;
+    border-top: 1px solid #333;
+    box-sizing: border-box;
+}
+
+
+/* -------------------- header -------------------- */
+
+#header {
+    width: 100%;
+    height: 80px;
+    background: #faf9ff;
+    border-bottom: 1px solid #333;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 998;
+    display: flex;
+    justify-content: space-between;
+}
+#header h1 {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #333;
+    box-sizing: border-box;
+}
+#header .gnb {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    z-index: 9999;
+}
+#header .gnb li:not(:last-child) {
+    margin-right: 10px;
+}
+#header .gnb li a {
+    display: block;
+    color: #333;
+    padding: 8px 18px;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    border-radius: 100px;
+}
+#header .gnb li.on a {
+    color: #faf9ff;
+    background: #333;
+}
+
+.select.on {
+    color: #faf9ff;
+    background: #333;
+    box-sizing: border-box;
+    border-radius: 100px;
+    transition: all 0.5s ease;
+}
+
+
+/* -------------------- main -------------------- */
+
+/* --------------- 페이지 서식 --------------- */
+
+#fullpage .section .inner {
+    width: calc(100% - 80px);
+    height: calc(100% - 80px);
+    position: absolute;
+    top: 80px; left: 80px;
+}
+
+/* --------------- 글자 서식 --------------- */
+
+#fullpage div h3 {
+    margin-bottom: 26px;
+    font-size: 40px;
+    font-weight: 800;
+}
+#fullpage div p:not(:last-child) {
+    margin-bottom: 22px;
+}
+#fullpage div p span {
+    display: inline-block;
+    font-weight: 500;
+}
+
+/* --------------- section 01 --------------- */
+
+#fullpage #sec01 {
+    width: 100%;
+    background: url('../images/background.png') no-repeat;
+    background-size: cover;
+    animation: bg 4s ease infinite;
+}
+@keyframes bg {
+    0% {background-position: 0 0;}
+    50% {background-position: 0 50px;}
+    100% {background-position: 0 0;}
+}
+#fullpage #sec01 p {
+    font-family: 'NewYork';
+    font-size: 160px;
+    text-align: center;
+    margin: 0 auto;
+}
+#fullpage #sec01 p span {
+    color: #ac9bff;
+}
+
+/* --------------- section 02 --------------- */
+
+#fullpage #sec02 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#fullpage #sec02 .inner .topbox {
+    width: 100%;
+    height: calc(100% / 2);
+    display: flex;
+    border-bottom: 1px solid #333;
+    box-sizing: border-box;
+}
+#fullpage #sec02 .inner .topbox div {
+    width: 33.33%;
+    padding: 80px;
+    box-sizing: border-box;
+}
+#fullpage #sec02 .inner .topbox>div:not(:last-child),
+#fullpage #sec02 .inner .botbox>div:not(:last-child) {
+    border-right: 1px solid #333;
+    box-sizing: border-box;
+}
+#fullpage #sec02 .inner .topbox .profile p span {
+    width: 100px;
+}
+#fullpage #sec02 .inner .topbox .license p span {
+    width: 140px;
+}
+#fullpage #sec02 .inner .topbox .license p:last-child {
+    margin-top: 40px;
+}
+#fullpage #sec02 .inner .topbox .picture {
+    background: url('../images/my_pic.jpg') no-repeat 0 -20px;
+    background-size: cover;
+}
+#fullpage #sec02 .inner .botbox {
+    width: 100%;
+    height: calc(100% / 2);
+    box-sizing: border-box;
+    display: flex;
+}
+#fullpage #sec02 .inner .botbox>div {
+    width: 50%;
+    padding: 80px;
+    box-sizing: border-box;
+}
+#fullpage #sec02 .inner .botbox .work_edu p span {
+    width: 210px;
+}
+#fullpage #sec02 .inner .botbox .skills .program {
+    display: flex;
+}
+#fullpage #sec02 .inner .botbox .skills .program p {
+    width: 130px;
+    display: inline-block;
+}
+#fullpage #sec02 .inner .botbox .skills .program .prog_bar {
+    width: 612px;
+    height: 12px;
+    background: transparent;
+    border: 1px solid #333;
+    box-sizing: border-box;
+}
+#fullpage #sec02 .inner .botbox .skills .program .prog_bar .prog_lv {
+    height: 100%;
+    background: #ac9bff;
+    border-right: 1px solid #333;
+    box-sizing: border-box;
+    animation: ani 1s ease 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+#fullpage #sec02 .inner .botbox .skills .program .prog_bar .lv1 {
+    width: 98%;
+}
+#fullpage #sec02 .inner .botbox .skills .program .prog_bar .lv2 {
+    width: 85%;
+    animation-delay: 0.8s;
+}
+#fullpage #sec02 .inner .botbox .skills .program .prog_bar .lv3 {
+    width: 95%;
+    animation-delay: 1.1s;
+}
+#fullpage #sec02 .inner .botbox .skills .program .prog_bar .lv4 {
+    width: 90%;
+    animation-delay: 1.4s;
+}
+#fullpage #sec02 .inner .botbox .skills .program .prog_bar .lv5 {
+    width: 90%;
+    animation-delay: 1.7s;
+}
+#fullpage #sec02 .inner .botbox .skills .program .prog_bar .lv6 {
+    width: 70%;
+    animation-delay: 2s;
+}
+#fullpage #sec02 .inner .botbox .skills .program .prog_bar .lv7 {
+    width: 75%;
+    animation-delay: 2.3s;
+}
+@keyframes ani {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* --------------- section 03 --------------- */
+
+.web::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 30px; left: 30px;
+    background: url('../images/monitor_FILL0_wght300_GRAD-25_opsz40.png') no-repeat;
+    opacity: 0;
+    background-size: cover;
+    transition: all 0.3s ease;
+}
+.web:hover::before {
+    opacity: 0.3;
+    transition: all 0.3s ease;
+}
+.res::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 30px; left: 30px;
+    background: url('../images/devices_FILL0_wght300_GRAD-25_opsz40.png') no-repeat;
+    opacity: 0;
+    background-size: cover;
+}
+.res:hover::before {
+    opacity: 0.3;
+    transition: all 0.3s ease;
+}
+.mob::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 30px; left: 30px;
+    background: url('../images/phone_iphone_FILL0_wght300_GRAD-25_opsz40.png') no-repeat;
+    opacity: 0;
+    background-size: cover;
+}
+.mob:hover::before {
+    opacity: 0.3;
+    transition: all 0.3s ease;
+}
+
+#fullpage #sec03 {
+    width: 100%;
+    height: 100%;
+}
+#fullpage #sec03 .inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+#fullpage #sec03 .inner div {
+    width: 33.33%;
+    height: calc(100% / 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#fullpage #sec03 .inner div:not(:last-child) {
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    box-sizing: border-box;
+}
+#fullpage #sec03 .inner div:nth-child(3) {
+    border-right: none;
+}
+#fullpage #sec03 .inner div:nth-child(4),
+#fullpage #sec03 .inner div:nth-child(5) {
+    border-bottom: none;
+}
+#fullpage #sec03 .inner div a {
+    text-align: center;
+}
+#fullpage #sec03 .inner div a img {
+    width: 60%;
+    filter: grayscale(1);
+    transition: all 0.3s ease;
+}
+#fullpage #sec03 .inner div a:hover img {
+    filter: grayscale(0);
+}
+
+/* --------------- section 04 --------------- */
+
+#fullpage #sec04 {
+    width: 100%;
+    height: 100%;
+}
+#fullpage #sec04 .inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+#fullpage #sec04 .inner div {
+    width: 25%;
+    height: calc(100% / 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#fullpage #sec04 .inner div:not(:last-child) {
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    box-sizing: border-box;
+}
+
+#fullpage #sec04 .inner div:nth-child(4) {
+    border-right: none;
+}
+#fullpage #sec04 .inner div:nth-child(5),
+#fullpage #sec04 .inner div:nth-child(6),
+#fullpage #sec04 .inner div:nth-child(7) {
+    border-bottom: none;
+}
+#fullpage #sec04 .inner div a img {
+    width: 60%;
+    filter: grayscale(1);
+    transition: all 0.3s ease;
+}
+#fullpage #sec04 .inner div a {
+    text-align: center;
+}
+#fullpage #sec04 .inner .design07 a img,
+#fullpage #sec04 .inner .design08 a img {
+    width: 82%;
+}
+#fullpage #sec04 .inner div a:hover img {
+    filter: grayscale(0);
+}
+#fullpage #sec04 .inner div a p {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    background: rgba(172,155,255,0.6);
+    box-sizing: border-box;
+    position: absolute;
+    top: 0; left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    word-break: keep-all;
+}
+#fullpage #sec04 .inner div:hover a p {
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+/* --------------- section 05 --------------- */
+
+#fullpage #sec05 {
+    width: 100%;
+    height: 100%;
+}
+#fullpage #sec05 .inner {
+    display: flex;
+    flex-direction: column;
+}
+#fullpage #sec05 .inner .cont {
+    height: calc(100% - 80px);
+    display: flex;
+}
+#fullpage #sec05 .inner .cont .leftbox {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #333;
+    box-sizing: border-box;
+}
+#fullpage #sec05 .inner .cont .leftbox .topbox {
+    width: 100%;
+    height: 34%;
+    border-bottom: 1px solid #333;
+    box-sizing: border-box;
+    display: flex;
+}
+#fullpage #sec05 .inner .cont .leftbox .topbox>div {
+    width: 33.33%;
+    height: 100%;
+    padding: 80px 50px;
+    border-right: 1px solid #333;
+    box-sizing: border-box;
+}
+#fullpage #sec05 .inner .cont .leftbox .topbox>div:last-child {
+    border-right: none;
+}
+#fullpage #sec05 .inner .cont .leftbox .botbox {
+    width: 100%;
+    height: 66%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#fullpage #sec05 .inner .cont .leftbox .botbox div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+#fullpage #sec05 .inner .cont .leftbox .botbox div:last-child {
+    margin-bottom: 40px;
+}
+#fullpage #sec05 .inner .cont .leftbox .botbox div input {
+    width: 900px;
+    height: 60px;
+    padding: 0 26px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    border-radius: none;
+    color: #333;
+    font-family: 'Malgun Gothic';
+    font-size: 15px;
+}
+#fullpage #sec05 .inner .cont .leftbox .botbox div textarea {
+    width: 900px;
+    height: 210px;
+    padding: 26px 26px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    border-radius: none;
+    color: #333;
+    font-family: 'Malgun Gothic';
+    font-size: 15px;
+}
+#fullpage #sec05 .inner .cont .leftbox .botbox div input::placeholder,
+#fullpage #sec05 .inner .cont .leftbox .botbox div textarea::placeholder {
+    font-family: 'Pretendard';
+    font-size: 16px;
+}
+#fullpage #sec05 .inner .cont .leftbox .botbox .send_btn {
+    padding: 15px 60px;
+    background: #333;
+    box-sizing: border-box;
+    color: #faf9ff;
+    cursor: pointer;
+    float: right;
+}
+#fullpage #sec05 .inner .cont .rightbox {
+    width: 40%;
+    height: 100%;
+}
+#fullpage #sec05 .inner .cont .rightbox iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* -------------------- footer -------------------- */
+
+
+#fullpage #sec05 .inner .footer {
+    width: 100%;
+    height: 80px;
+    padding: 0 50px;
+    background: #333;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#fullpage #sec05 .inner .footer p {
+    color: #bbb;
+    font-weight: 300;
+    margin: 0;
+}
+
+
+
+
+
+/* ------------------------- mobile ------------------------- */
+
+@media screen and (max-width: 767px) {
+
+    #header {
+        height: 70px;
+        justify-content: center;
+    }
+    #header h1 {
+        width: 70px;
+        height: 70px;
+        border-right: none;
+    }
+    #header h1 img {
+        width: 40px;
+    }
+    #header .gnb {
+        display: none;
+    }
+
+    #fullpage #sec01 {
+        width: 100%;
+    }
+    #fullpage #sec01 p {
+        font-size: 64px;
+        text-align: center;
+        line-height: 70px;
+        box-sizing: border-box;
+    }
+    
+    #fullpage .section .left_bar {
+        display: none;
+    }
+    #fullpage .section .inner {
+        width: 100%;
+        height: calc(100% - 70px);
+        top: 70px; left: 0;
+    }
+
+    #fullpage div h3 {
+        font-size: 32px;
+    }
+    #fullpage div p span {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+    #fullpage #sec01 p span {
+        display: inline;
+        margin-bottom: 0;
+    }
+    #fullpage #sec02 {
+        width: 100%;
+        height: 100%;
+    }
+    #fullpage #sec02 .inner .topbox {
+        height: 45%;
+    }
+    #fullpage #sec02 .inner .topbox div {
+        width: 50%;
+        padding: 40px;
+    }
+    #fullpage #sec02 .inner .topbox div:nth-child(3) {
+        display: none;
+    }
+    #fullpage #sec02 .inner .botbox div {
+        width: 100%;
+        height: 60%;
+        padding: 40px;
+    }
+    #fullpage #sec02 .inner .topbox .license p:last-child {
+        margin-top: 0;
+    }
+    #fullpage #sec02 .inner .topbox .license p:nth-child(2) {
+        display: none;
+    }
+    #fullpage #sec02 .inner .botbox .skills {
+        display: none;
+    }
+
+    #fullpage #sec03 .inner div {
+        width: 50%;
+        height: 33.33%;
+    }
+    #fullpage #sec03 .inner div:nth-child(2) {
+        border-right: none;
+    }
+    #fullpage #sec03 .inner div:nth-child(3) {
+        border-right: 1px solid #333;
+        box-sizing: border-box;
+    }
+    #fullpage #sec03 .inner div:nth-child(4) {
+        border-right: none;
+        border-bottom: 1px solid #333;
+        box-sizing: border-box;
+    }
+
+    #fullpage #sec04 .inner div {
+        width: 50%;
+        height: 25%;
+    }
+    #fullpage #sec04 .inner div:nth-child(2) {
+        border-right: none;
+    }
+    #fullpage #sec04 .inner div:nth-child(5) {
+        border-bottom: 1px solid #333;
+        box-sizing: border-box;
+    }
+    #fullpage #sec04 .inner div:nth-child(6) {
+        border-bottom: 1px solid #333;
+        border-right: none;
+        box-sizing: border-box;
+    }
+    #fullpage #sec04 .inner div a img {
+        width: 50%;
+    }
+    #fullpage #sec04 .inner .design07 a img,
+    #fullpage #sec04 .inner .design08 a img {
+        width: 65%;
+    }
+
+    #fullpage #sec05 .inner .cont {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #fullpage #sec05 .inner .cont .leftbox {
+        width: 100%;
+        border-right: none;
+    }
+    #fullpage #sec05 .inner .cont .rightbox {
+        width: 100%;
+    }
+    #fullpage #sec05 .inner .cont .leftbox .topbox {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border-bottom: none;
+    }
+    #fullpage #sec05 .inner .cont .leftbox .topbox>div {
+        width: 100%;
+        height: 100%;
+        padding: 20px 40px;
+        border-right: none;
+        border-bottom: 1px solid #333;
+        box-sizing: border-box;
+    }
+    #fullpage #sec05 .inner .cont .leftbox .botbox {
+        display: none;
+    }
+
+    #fullpage #sec05 .inner .footer {
+        width: 100%;
+        height: 70px;
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #fullpage #sec05 .inner .footer p {
+        font-size: 13px;
+    }
+    #fullpage #sec05 .inner .footer p:first-child {
+        margin-bottom: 5px;
+    }
+
+}
